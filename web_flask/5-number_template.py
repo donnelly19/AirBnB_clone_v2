@@ -3,7 +3,7 @@
 Start Flask project
 """
 
-from flask import Flask
+from flask import Flask, render_template
 app = Flask(__name__)
 
 
@@ -32,12 +32,12 @@ def pythoniscool(text='is cool'):
     return 'Python ' + text.replace('_', ' ')
 
 
-@app.route('/number/<n>', strict_slashes=False)
+@app.route('/number/<int:n>', strict_slashes=False)
 def iamnumber(n):
-    return "{:d} is a number".format(n)
+    return f"{n} is a number"
 
 
-@app.route('/number_template/<n>', strict_slashes=False)
+@app.route('/number_template/<int:n>', strict_slashes=False)
 def numberandtemplate(n):
     """display a HTML page only if n is an integer"""
     return render_template('5-number.html', n=n)
