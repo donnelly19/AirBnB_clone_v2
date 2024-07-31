@@ -13,7 +13,7 @@ if models.storage_t == 'db':
                                  ForeignKey('places.id', onupdate='CASCADE',
                                             ondelete='CASCADE'),
                                  primary_key=True),
-                          Column('amenity_id' String(60),
+                          Column('amenity_id', String(60),
                                  ForeignKey('amenities.id', onupdate='CASCADE',
                                             ondelete='CASCADE'),
                                  primary_key=True))

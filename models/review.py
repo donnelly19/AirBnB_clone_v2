@@ -2,9 +2,9 @@
 """ Review module for the HBNB project """
 import models
 from models.base_model import BaseModel, Base
-from os import genenv
+from os import getenv
 import sqlalchemy
-from slqalchemy import Column, String, ForeignKey
+from sqlalchemy import Column, String, ForeignKey
 
 
 class Review(BaseModel):
